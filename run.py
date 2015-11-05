@@ -25,7 +25,7 @@ app = Flask(__name__)
 #Now, when someone sends you a text message, we try to look up their name in the callers dictionary.
 #If we succeed, we send them a text message with their name; otherwise, we send a text message with a generic greeting.
 callers = {
-    "+14155680029": "Justine",
+    "+14182630043": "fakefriend",
 
 }
 
@@ -37,7 +37,7 @@ def hello_monkey():
     print request.values.get('Body', None)
 
     if from_number in callers:
-        message = callers[from_number] + ", hey its me Ryan from the bar"
+        message = callers[from_number] + ", hey its an automated message from twilio"
         print message
     else:
         message = "Monkey, thanks for the message!"
